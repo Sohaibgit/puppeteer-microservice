@@ -4,12 +4,12 @@ import { launch } from 'puppeteer';
 const app = express();
 const PORT = 3000;
 
-// 👋 Home Route
+// Home Route
 app.get('/', (req, res) => {
-  res.send('Hello, Sohaib! Your server is running 🚀');
+  res.send('The server is running...');
 });
 
-// 🕷 Scrape Route
+// Scrape Route
 app.get('/scrape', async (req, res) => {
   const { url } = req.query;
 
@@ -46,5 +46,5 @@ app.get('/scrape', async (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`✅ Server is live at http://localhost:${PORT}`);
+  console.log(`Server is live at http://localhost:${PORT}`);
 });
