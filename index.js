@@ -1,3 +1,4 @@
+
 import express from 'express';
 import { launch } from 'puppeteer';
 
@@ -31,9 +32,8 @@ app.get('/scrape', async (req, res) => {
 
     const page = await browser.newPage();
 
-    // Optional: Pretend to be a real browser
     await page.setUserAgent(
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     );
 
     await page.setViewport({ width: 1366, height: 768 });
