@@ -2,7 +2,6 @@ import express from 'express';
 import { launch } from 'puppeteer';
 
 const app = express();
-const PORT = 3000;
 
 // Home Route
 app.get('/', (req, res) => {
@@ -55,8 +54,9 @@ app.get('/scrape', async (req, res) => {
   }
 });
 
-
+const PORT = process.env.PORT || 3000;
+const PUBLIC_URL = process.env.PUBLIC_URL || `http://localhost:${PORT}`;
 
 app.listen(PORT, () => {
-  console.log(`Server is live at http://localhost:${PORT}`);
+  console.log(`The service is live at ${PUBLIC_URL}`);
 });
