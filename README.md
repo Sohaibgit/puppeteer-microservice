@@ -131,7 +131,7 @@ Do not use this service to scrape websites without reviewing their policies.
 
 ---
 
-## 9. Author
+## 8. Author
 
 Sohaib Khan  
 GitHub: https://github.com/Sohaibgit
